@@ -1,0 +1,28 @@
+<nav class="navbar navbar-dark navbar-expand-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home"> Movies <i class="bi bi-film"></i> </a>
+
+      <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        <form class="d-flex">
+          <input #txtSearch
+          (keyup.enter)="buscarPelicula( txtSearch.value )"
+           class="form-control me-2" 
+           type="search" 
+           placeholder="Search movie" 
+           aria-label="Search">
+          <button (click) = "buscarPelicula( txtSearch.value )"
+          class="btn btn-outline-success" type="submit">Search </button>
+        </form>
+      </div>
+    </div>
+  </nav>
